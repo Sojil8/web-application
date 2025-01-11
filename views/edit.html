@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Page</title>
+    <style>
+        body {
+            background-color: #121212;
+            /* Dark theme background */
+            color: #ffffff;
+            /* Text color */
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url(/assets/pic4.avif);
+            background-size: 100%;
+        }
+
+        .edit-container {
+            background-color: #1e1e1e;
+            /* Slightly lighter background for contrast */
+            padding: 35px;
+            padding-top: 20px;
+            padding-bottom: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+
+        .edit-container h2 {
+            margin-bottom: 20px;
+            padding-bottom: 35px;
+            font-size: 35px;
+            color: #ffcc00;
+            /* Accent color for headings */
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2a2a2a;
+            color: #ffffff;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 35px;
+        }
+
+        .buttons button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .buttons .save-btn {
+            background-color: #4caf50;
+            color: #ffffff;
+        }
+
+        .buttons .close-btn {
+            background-color: #f44336;
+            color: #ffffff;
+        }
+
+        .buttons button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="edit-container">
+        <h2>Edit Profile</h2>
+        <form action="/admin/edit-user/{{.}}" method="post">
+            <div class="form-group">
+                <input name="username" type="text" id="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <input name="email" type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+
+            <div class="buttons">
+                <input type="submit" class="save-btn" value="Save">
+                <a href="/adminpannel"><button type="button" class="close-btn">Close</button></a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

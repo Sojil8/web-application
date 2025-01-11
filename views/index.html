@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/pick.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgb(196, 196, 6);
+    background: rgb(0, 0, 0);
+}
+
+/* Welcome Message */
+h1 {
+    font-size: 28px;
+    color: #b60000;
+    margin-bottom: 30px;
+}
+
+/* Button Styling */
+.buttons button {
+    background-color: rgb(39, 39, 39);
+    color:rgb(255, 252, 252);
+    font-size: 18px;
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.buttons button:hover {
+    background-color: #ffffff;
+    color: black;
+}
+.welcome{
+    font-size: 40px;
+    color: rgb(206, 195, 195);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <form action="/" method="post"></form> -->
+        <h1 class="welcome">Welcome to Our Website</h1>
+        <div class="buttons">
+            <a href="/user/signup"><button>Login/Sign Up</button></a>
+            <a href="/admin/login"><button>Admin Login</button></a>
+        </div>
+    </div>
+</body>
+</html>
